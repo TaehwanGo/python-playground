@@ -122,4 +122,81 @@
 # 인덱스와 이름을 혼용해서 넣기
 # print("I ate {0} apples. so I was sick for {day} days.".format(10, day=3)) # I ate 10 apples. so I was sick for 3 days.
 
-# TODO : 왼쪽 정렬 부터 이어서 하기
+# 왼쪽 정렬
+# print("{0:<10}".format("hi")) # hi         # :<10 표현식을 사용하면 치환되는 문자열을 왼쪽으로 정렬하고 문자열의 총 자릿수를 10으로 맞출 수 있다.
+
+# 오른쪽 정렬
+# print("{0:>10}".format("hi")) #         hi # :>10 표현식을 사용하면 치환되는 문자열을 오른쪽으로 정렬하고 문자열의 총 자릿수를 10으로 맞출 수 있다.
+
+# 가운데 정렬
+# print("{0:^10}".format("hi")) #     hi     # :^10 표현식을 사용하면 치환되는 문자열을 가운데로 정렬하고 문자열의 총 자릿수를 10으로 맞출 수 있다.
+
+# 공백 채우기
+# print("{0:=^10}".format("hi")) # ====hi==== # 가운데 정렬하고 '=' 문자로 공백 채우기
+# print("{0:!<10}".format("hi")) # hi!!!!!!!! # 왼쪽 정렬하고 '!' 문자로 공백 채우기
+
+# 소수점 표현하기
+# print("{0:0.4f}".format(3.42134234)) # 3.4213 # 소수점 네 번째 자리까지만 표시 - 반올림해서 표시된다.
+
+# { 또는 } 문자 표현하기
+# print("{{ and }}".format()) # { and } # {{ }}로 사용하면 { } 문자를 표현할 수 있다.
+
+# f 문자열 포매팅
+# 파이썬 3.6 버전부터는 f 문자열 포매팅 기능을 사용할 수 있다.
+# f 문자열 포매팅은 위의 문자열 포매팅 예제를 다음과 같이 간단하게 사용할 수 있다.
+# name = "홍길동"
+# age = 30
+# print(f"나의 이름은 {name}입니다. 나이는 {age}입니다.") # 나의 이름은 홍길동입니다. 나이는 30입니다.
+
+# f 문자열 포매팅은 표현식을 지원하기 때문에 다음과 같은 것도 가능하다.
+# age = 30
+# print(f"나는 내년이면 {age+1}살이 된다.") # 나는 내년이면 31살이 된다.
+
+# 딕셔너리는 f 문자열 포매팅에서 다음과 같이 사용할 수 있다.
+# d = {"name":"홍길동", "age":30}
+# print(f'나의 이름은 {d["name"]}입니다. 나이는 {d["age"]}입니다.') # 나의 이름은 홍길동입니다. 나이는 30입니다.
+
+# 문자열 관련 함수들
+# 문자 개수 세기(count)
+# a = "hobby"
+# print(a.count("b")) # 2
+
+# 위치 알려주기1(find)
+# a = "Python is the best choice"
+# print(a.find("b")) # 14 -> 0부터 시작한다.
+# print(a.find("k")) # -1 # 존재하지 않는다면 -1을 반환한다.
+# print(a.index("b")) # 14
+# print(a.index("k")) # ValueError: substring not found # 존재하지 않는다면 오류를 발생시킨다.
+
+# 문자열 삽입 (join)
+# print(",".join("abcd")) # a,b,c,d # abcd 문자열의 각각의 문자 사이에 ','를 삽입한다.
+# print(",".join(["a", "b", "c", "d"])) # a,b,c,d # 리스트나 튜플도 입력으로 사용할 수 있다.
+
+# 소문자를 대문자로 바꾸기(upper)
+# a = "hi"
+# print(a.upper()) # HI
+
+# 대문자를 소문자로 바꾸기(lower)
+# a = "HI"
+# print(a.lower()) # hi
+
+# 왼쪽 공백 지우기(lstrip)
+# a = " hi "
+# print(a.lstrip()) # hi
+
+# 오른쪽 공백 지우기(rstrip)
+# a = " hi "
+# print(a.rstrip()) # hi
+
+# 문자열 바꾸기(replace)
+# a = "Life is too short"
+# print(a.replace("Life", "Your leg")) # Your leg is too short
+
+# 문자열 나누기(split)
+# a = "Life is too short"
+# print(a.split()) # ['Life', 'is', 'too', 'short'] # 공백을 기준으로 문자열을 나눈다.
+# b = "a:b:c:d"
+# print(b.split(":")) # ['a', 'b', 'c', 'd'] # ':'을 기준으로 문자열을 나눈다.
+# print(b.split('')) # ValueError: empty separator # ''을 기준으로 문자열을 나누려고 하면 오류가 발생한다.
+# c = 'abc' # 'abc'를 [a,b,c]로 나누려면 어떻게 해야 할까?
+# print(list(c)) # ['a', 'b', 'c'] # list 함수를 사용하면 된다.
