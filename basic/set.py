@@ -47,4 +47,4 @@ print(s1) # {1, 2, 3, 4, 5, 6}
 # 특정 값 제거하기(remove)
 s1 = set([1, 2, 3])
 s1.remove(2)
-print(s1) # {1, 3}
+print(s1)  # {1, 3}
