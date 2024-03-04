@@ -1,9 +1,9 @@
 # while 문
-'''
+"""
 while 조건:
     실행문
     실행문
-'''
+"""
 # treeHit = 0
 # while treeHit < 10:
 #     treeHit = treeHit + 1
